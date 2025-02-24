@@ -1,0 +1,17 @@
+body {
+    background-color: #FFE6E6;
+}
+#map {
+    height: 75vh;
+    width: 75%;
+}
+#outerMap {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #dea3bd;
+}
