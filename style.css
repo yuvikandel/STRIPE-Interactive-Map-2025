@@ -4,14 +4,36 @@ body {
 #map {
     height: 75vh;
     width: 75%;
+    z-index: 0;
 }
 #outerMap {
     display: flex;
     justify-content: center;
     vertical-align: middle;
+    z-index: 0;
 }
 h1 {
     font-size: 50px;
     text-align: center;
     color: #dea3bd;
+}
+.hide {
+    visibility: hidden;
+}
+.infoCard {
+    width: 15%;
+    height: 300px;
+    border-radius: 25px;
+    background-color: #fffbe4;
+    text-align: center;
+    margin: 10px;
+    display: none;
+    z-index: 1;
+}
+.cardButton {
+    border-color: #FFE6E6;
+    background-color: #FFE6E6;
+    color: #dea3bd;
+    margin: 10px;
+    text-align: end;
 }
