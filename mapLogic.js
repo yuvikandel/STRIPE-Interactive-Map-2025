@@ -1,3 +1,6 @@
+import * as data from 'output.json';
+const json = data;
+console.log(json);
 var mymap = L.map('map').setView([0, 0], 2);
 var zebra_img = L.icon({
     iconUrl: 'pinkzebra_cute.png',
