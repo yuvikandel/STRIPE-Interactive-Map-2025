@@ -1,4 +1,4 @@
-const fs = require("fs");
+/**const fs = require("fs");
 csv = fs.readFileSync("ZebraMigrationData.csv");
 
 const array = csv.toString().split("\r");
@@ -37,4 +37,32 @@ for (let i = 1; i < array.length - 1; i++) {
 //console.log(result)
 let json = JSON.stringify(result);
 
-//fs.writeFileSync('output.json', json);
+//fs.writeFileSync('output.json', json);**/
+
+const csv = require('csv-parser')
+const fs = require('fs')
+const results = [];
+let lat_values = [];
+let long_values = [];
+let location = [];
+
+ let object = fs.createReadStream('ZebraMigrationData.csv')
+  .pipe(csv())
+  .on('data', (row) => {
+        latitude = row.latitude;
+        lat_values.push(latitude)
+        longitude = row.longitude;
+        long_values.push(longitude)
+        //console.log(lat_values)
+        results.push(row)
+  })
+  .on('end', () => {
+    //console.log(results);
+    location = [lat_values, long_values]
+    return location
+});
+console.log(object)
+
+let json = JSON.stringify(object);
+
+fs.writeFileSync('output.json', json);
