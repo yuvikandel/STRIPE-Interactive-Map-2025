@@ -44,25 +44,21 @@ const fs = require('fs')
 const results = [];
 let lat_values = [];
 let long_values = [];
-let location = [];
 
- let object = fs.createReadStream('ZebraMigrationData.csv')
+fs.createReadStream('ZebraMigrationData.csv')
   .pipe(csv())
   .on('data', (row) => {
-        latitude = row.latitude;
-        lat_values.push(latitude)
-        longitude = row.longitude;
-        long_values.push(longitude)
+       // lat_values.push(latitude)
+        //longitude = row.longitude;
+       // long_values.push(longitude)
         //console.log(lat_values)
-        results.push(row)
+        results.push({
+            'latitude' : row.latitude,
+            'longitude' : row.longitude
+        })
   })
   .on('end', () => {
-    //console.log(results);
-    location = [lat_values, long_values]
-    return location
+    console.log(results);
+    let json = JSON.stringify(results);
+    fs.writeFileSync('output.json', json);
 });
-console.log(object)
-
-let json = JSON.stringify(object);
-
-fs.writeFileSync('output.json', json);
