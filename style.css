@@ -25,10 +25,13 @@ h1 {
     height: 300px;
     border-radius: 25px;
     background-color: #fffbe4;
+    position: fixed;
     text-align: center;
     margin: 10px;
+    margin-top: -350px;
+    margin-left: 15%;
     display: none;
-    z-index: 1;
+    z-index: 1000;
 }
 .cardButton {
     border-color: #FFE6E6;
