@@ -45,17 +45,21 @@ body {
     background-color: #fffbe4;
     margin-bottom: 30px;
     padding: 5px;
+    display: flex;
+    justify-self: flex-start ;
+    flex-direction: row;
 }
 
 #zebraCard {
     border-radius: 25px;
-    height: 400px;
+    height: 450px;
     width: 275px;
     background-color: #fffbe4;
-    padding: 5px;
+    padding: 7px;
     margin-bottom: 30px;
     position: absolute;
     z-index: 1000;
+    margin-left: 75%;
 }
 
 #birdCard {
@@ -67,6 +71,7 @@ body {
     margin-bottom: 30px;
     position: absolute;
     z-index: 1000;
+    margin-left: 75%;
 }
 
 #dolphinCard {
@@ -77,6 +82,7 @@ body {
     padding: 5px;
     position: absolute;
     z-index: 1000;
+    margin-left: 70%;
 }
 
 .h2font {
@@ -121,13 +127,13 @@ body {
 
 #map {
     height: 75vh;
-    width: 75%;
+    width: 80%;
     z-index: 0;
 }
 
 #outerMap {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     vertical-align: middle;
     z-index: 0;
 }
@@ -150,8 +156,7 @@ h1 {
     position: absolute;
     text-align: center;
     margin: 10px;
-    margin-top: -350px;
-    margin-left: 15%;
+    margin-top: -475px;
     display: none;
     z-index: 1000;
 }
