@@ -24,8 +24,8 @@ body {
 
 
 .pink_font {
-    color: #872a33; 
-    text-align : center;
+    color: #872a33;
+    text-align: center;
     font-family: merriwheather;
     font-size: 15px;
 
@@ -44,40 +44,44 @@ body {
     width: 15%;
     background-color: #fffbe4;
     margin-bottom: 30px;
+    padding: 5px;
 }
 
 #zebraCard {
     border-radius: 25px;
-    height: 400px; 
+    height: 400px;
     width: 275px;
     background-color: #fffbe4;
     padding: 5px;
     margin-bottom: 30px;
+    position: absolute;
+    z-index: 1000;
 }
 
 #birdCard {
     border-radius: 25px;
     height: 505px;
     width: 275px;
-    background-color:  #fffbe4;
+    background-color: #fffbe4;
     padding: 5px;
     margin-bottom: 30px;
+    position: absolute;
+    z-index: 1000;
 }
 
 #dolphinCard {
     border-radius: 25px;
     height: 550px;
     width: 300px;
-    background-color:  #fffbe4;
+    background-color: #fffbe4;
     padding: 5px;
+    position: absolute;
+    z-index: 1000;
 }
 
 .h2font {
     color: #ffb6c1;
     text-align: center;
-
-
-
 }
 
 .h2font_2 {
@@ -114,31 +118,36 @@ body {
 
 
 }
+
 #map {
     height: 75vh;
     width: 75%;
     z-index: 0;
 }
+
 #outerMap {
     display: flex;
     justify-content: center;
     vertical-align: middle;
     z-index: 0;
 }
+
 h1 {
     font-size: 50px;
     text-align: center;
     color: #dea3bd;
 }
+
 .hide {
     visibility: hidden;
 }
+
 .infoCard {
     width: 15%;
     height: 300px;
     border-radius: 25px;
     background-color: #fffbe4;
-    position: fixed;
+    position: absolute;
     text-align: center;
     margin: 10px;
     margin-top: -350px;
@@ -146,6 +155,7 @@ h1 {
     display: none;
     z-index: 1000;
 }
+
 .cardButton {
     border-color: #FFE6E6;
     background-color: #FFE6E6;

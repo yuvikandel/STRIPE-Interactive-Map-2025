@@ -55,6 +55,7 @@ function toggleZebra() {
 function toggleBird() {
     element = document.getElementById('birdCard');
     element.style.display = 'block';
+    console.log("bird")
 }
 function toggleDolphin() {
     element = document.getElementById('dolphinCard');
