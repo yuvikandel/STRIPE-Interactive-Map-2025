@@ -1,10 +1,6 @@
-
-
-
 body {
     background-color: #fcd2d3;
     font-family: 'Merriweather', serif;
-
 }
 
 .pinkdolphin_image {
@@ -50,7 +46,7 @@ body {
     margin-bottom: 30px;
 }
 
-.zebracard {
+#zebraCard {
     border-radius: 25px;
     height: 400px; 
     width: 275px;
@@ -59,8 +55,7 @@ body {
     margin-bottom: 30px;
 }
 
-
-.pinkbirdcard {
+#birdCard {
     border-radius: 25px;
     height: 505px;
     width: 275px;
@@ -69,7 +64,7 @@ body {
     margin-bottom: 30px;
 }
 
-.pinkdolphincard {
+#dolphinCard {
     border-radius: 25px;
     height: 550px;
     width: 300px;
@@ -119,14 +114,42 @@ body {
 
 
 }
-
-.image_on_line {
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    background-image: url('line.png');
-    background-size: cover;
-    background-position: center;
+#map {
+    height: 75vh;
+    width: 75%;
+    z-index: 0;
+}
+#outerMap {
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+    z-index: 0;
+}
+h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #dea3bd;
+}
+.hide {
+    visibility: hidden;
+}
+.infoCard {
+    width: 15%;
+    height: 300px;
+    border-radius: 25px;
+    background-color: #fffbe4;
+    position: fixed;
+    text-align: center;
+    margin: 10px;
+    margin-top: -350px;
+    margin-left: 15%;
+    display: none;
+    z-index: 1000;
+}
+.cardButton {
+    border-color: #FFE6E6;
+    background-color: #FFE6E6;
+    color: #dea3bd;
+    margin: 10px;
+    text-align: end;
 }
