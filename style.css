@@ -1,0 +1,132 @@
+
+
+
+body {
+    background-color: #fcd2d3;
+    font-family: 'Merriweather', serif;
+
+}
+
+.pinkdolphin_image {
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 65px;
+
+}
+
+.pinkbird_image {
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 65px;
+}
+
+
+.pinkzebra_image {
+    background-size: cover;
+    background-position: center;
+}
+
+
+.pink_font {
+    color: #872a33; 
+    text-align : center;
+    font-family: merriwheather;
+    font-size: 15px;
+
+}
+
+.center_img {
+    display: block;
+    margin: auto;
+    width: 50%;
+    border-radius: 15%;
+}
+
+.key {
+    border-radius: 25px;
+    height: 400px;
+    width: 15%;
+    background-color: #fffbe4;
+    margin-bottom: 30px;
+}
+
+.zebracard {
+    border-radius: 25px;
+    height: 400px; 
+    width: 275px;
+    background-color: #fffbe4;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+
+.pinkbirdcard {
+    border-radius: 25px;
+    height: 505px;
+    width: 275px;
+    background-color:  #fffbe4;
+    padding: 5px;
+    margin-bottom: 30px;
+}
+
+.pinkdolphincard {
+    border-radius: 25px;
+    height: 550px;
+    width: 300px;
+    background-color:  #fffbe4;
+    padding: 5px;
+}
+
+.h2font {
+    color: #ffb6c1;
+    text-align: center;
+
+
+
+}
+
+.h2font_2 {
+    color: #fe8396;
+    text-align: center;
+    font-size: 25px
+}
+
+.testimg {
+    width: 10px;
+    background-image: url('image-removebg-preview.png');
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container img {
+    margin-right: 15px;
+}
+
+.container2 {
+    position: relative;
+
+}
+
+.line {
+    width: 100%;
+    height: 200px;
+    background-color: #ffb6c1;
+    margin-top: 50px;
+
+
+}
+
+.image_on_line {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    background-image: url('line.png');
+    background-size: cover;
+    background-position: center;
+}
