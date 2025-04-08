@@ -21,15 +21,15 @@ let dolphin_coordinates = [
 
 var mymap = L.map('map').setView([0, 0], 2);
 var zebra_img = L.icon({
-    iconUrl: 'pinkzebra_cute.png',
+    iconUrl: 'pinkzebra_image.png',
     iconSize:     [30, 30], // size of the icon
 });
 var bird_img = L.icon({
-    iconUrl: 'pinkbird_cute.png',
+    iconUrl: 'pinkbird_image.png',
     iconSize:     [30, 30], // size of the icon
 });
 var dolphin_img = L.icon({
-    iconUrl: 'pinkdolphin_cute.png',
+    iconUrl: 'pinkdolphin_image.png',
     iconSize:     [30, 30], // size of the icon
 });
 
