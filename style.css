@@ -1,6 +1,12 @@
 body {
     background-color: #fcd2d3;
     font-family: 'Merriweather', serif;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .pinkdolphin_image {
@@ -40,14 +46,16 @@ body {
 
 .key {
     border-radius: 25px;
-    height: 400px;
-    width: 15%;
+    height: 75vh;
+    width: 20%;
     background-color: #fffbe4;
     margin-bottom: 30px;
+    margin-left: 20px;
     padding: 5px;
     display: flex;
-    justify-self: flex-start ;
-    flex-direction: row;
+    justify-self: flex-start;
+    flex-direction: column;
+    vertical-align: middle;
 }
 
 #zebraCard {
@@ -115,15 +123,16 @@ body {
 
 #map {
     height: 75vh;
-    width: 80%;
+    width: 95%;
     z-index: 0;
 }
 
 #outerMap {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     vertical-align: middle;
     z-index: 0;
+    width: 80%;
 }
 
 h1 {
@@ -139,6 +148,7 @@ h1 {
 .infoCard {
     height: 575x;
     width: 330px;
+    overflow: hidden;
     border-radius: 25px;
     background-color: #fffbe4;
     position: absolute;
@@ -147,10 +157,10 @@ h1 {
     padding: 7px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: -475px;
+    margin-top: -525px;
     display: none;
     z-index: 1000;
-    margin-left: 70%;
+    margin-left: 67.5%;
 }
 
 .cardButton {
