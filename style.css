@@ -9,6 +9,11 @@ body {
     justify-content: space-evenly;
 }
 
+.trans_bg {
+    background-color: #fffbe4;
+    border: none;
+}
+
 .pinkdolphin_image {
     background-size: cover;
     background-position: center;
