@@ -24,13 +24,27 @@ var zebra_img = L.icon({
     iconUrl: 'pinkzebra_image.png',
     iconSize: [30, 30], // size of the icon
 });
+var zebraChallenge_img = L.icon({
+    iconUrl: 'lionicon.png',
+    iconSize: [50, 50], // size of the icon
+});
+
 var bird_img = L.icon({
     iconUrl: 'pinkbird_image.png',
     iconSize: [30, 30], // size of the icon
 });
+var birdChallenge_img = L.icon({
+    iconUrl: 'invasivefish.png',
+    iconSize: [50, 50], // size of the icon
+});
+
 var dolphin_img = L.icon({
     iconUrl: 'pinkdolphin_image.png',
     iconSize: [30, 30], // size of the icon
+});
+var dolphinChallenge_img = L.icon({
+    iconUrl: 'pollutionicon.png',
+    iconSize: [50, 50], // size of the icon
 });
 //let zebraShow = false;
 function markerZebra() {
@@ -40,6 +54,8 @@ function markerZebra() {
         zebra_marker.on('click', toggleZebra)
         //zebra_marker.classList.add('zebmarker')
     };
+    var zebraChallenge_marker = L.marker([-21.7914, 26.4734], {icon: zebraChallenge_img}).addTo(mymap)
+    zebraChallenge_marker.on('click', toggleZChallenge)
     //zebraShow = true;
     //}
 }
@@ -49,6 +65,8 @@ function markerDolphin() {
         var dolphin_marker = L.marker([dolphin_coordinates[i]['latitude'], dolphin_coordinates[i]['longitude']], { icon: dolphin_img }).addTo(mymap)
         dolphin_marker.on('click', toggleDolphin)
     };
+    var dolphinChallenge_marker = L.marker([-2.163106, -55.126648], {icon: dolphinChallenge_img}).addTo(mymap)
+    dolphinChallenge_marker.on('click', toggleDChallenge)
 }
 
 function markerBird() {
@@ -56,6 +74,8 @@ function markerBird() {
         var spoonbill_marker = L.marker([spoonbill_coordinates[i]['latitude'], spoonbill_coordinates[i]['longitude']], { icon: bird_img }).addTo(mymap)
         spoonbill_marker.on('click', toggleBird)
     };
+    var birdChallenge_marker = L.marker([13, -79], {icon: birdChallenge_img}).addTo(mymap)
+    birdChallenge_marker.on('click', toggleBChallenge)
 }
 
 function toggleZebra() {
@@ -68,6 +88,18 @@ function toggleBird() {
 }
 function toggleDolphin() {
     element = document.getElementById('dolphinCard');
+    element.style.display = 'block';
+}
+function toggleZChallenge() {
+    element = document.getElementById('zcCard');
+    element.style.display = 'block';
+}
+function toggleBChallenge() {
+    element = document.getElementById('bcCard');
+    element.style.display = 'block';
+}
+function toggleDChallenge() {
+    element = document.getElementById('dcCard');
     element.style.display = 'block';
 }
 function hideElement(idName) {
