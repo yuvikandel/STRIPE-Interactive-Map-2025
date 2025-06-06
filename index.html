@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
@@ -14,9 +13,9 @@
     <title>Interactive Map</title>
 </head>
 
-<body onload="markerDolphin(), markerBird(), markerZebra()">
+<body onload="markerDolphin(), markerBird(), markerZebra()"> <!-- run the functions when the website loads -->
     <h1>Interactive Map</h1>
-    <div class="main">
+    <div class="main"> <!-- map and key div -->
         <div class="key">
             <h2 class="h2font">Key</h2>
 
@@ -40,6 +39,7 @@
         </div>
     </div>
     <script src="mapLogic.js"></script>
+    <!-- info cards -->
     <div class="infoCard" id="birdCard">
         <button class="cardButton" id="birdButton" onclick="hideElement('birdCard')">X</button>
         <h2 class="h2font_2">Roseate Spoonbill Migration + Facts</h2>
@@ -106,6 +106,5 @@
         <img class="center_img" src="lion2.png" height="90px" alt="lion2">
         <p class="blue_font">Simba is the Swahili word for lion. It means "king" :)</p>
     </div>
- 
-
+</body>
 </html>
