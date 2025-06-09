@@ -109,7 +109,7 @@ var baseMaps = {
 var overlayMaps = {
     "dolphins": dolphins,
     "zebras": zebras,
-    "birds": birds
+    "spoonbills": birds
 };
 
 // populate layers on map
