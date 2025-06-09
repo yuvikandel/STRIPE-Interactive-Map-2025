@@ -55,6 +55,13 @@ body {
     border-radius: 15%;
 }
 
+.center_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .key {
     border-radius: 25px;
     height: 75vh;
@@ -206,4 +213,8 @@ h1 {
     background-color: #FFE6E6;
     color: #dea3bd;
     margin: 10px;
+}
+
+.roundedCorners {
+    border-radius: 50px;
 }

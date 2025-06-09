@@ -1,64 +1,23 @@
-/**const fs = require("fs");
-csv = fs.readFileSync("ZebraMigrationData.csv");
-
-const array = csv.toString().split("\r");
-console.log(array);
-let result = [];
-
-let headers = array[0].split(", ")
-
-for (let i = 1; i < array.length - 1; i++) {
-    let obj = {}
-
-    let str = array[i]
-    let s = ''
-
-    let flag = 0
-    for (let ch of str) {
-        if (ch === '"' && flag === 0) {
-            flag = 1
-        }
-        else if (ch === '"' && flag == 1) flag = 0
-        if (ch === ', ' && flag === 0) ch = '|'
-        if (ch !== '"') s += ch
-    }
-
-    let properties = s.split("|")
-
-    for (let j in headers) {
-        if (properties[j].includes(", ")) {
-            obj[headers[j]] = properties[j]
-                .split(", ").map(item => item.trim())
-        }
-        else obj[headers[j]] = properties[j]
-    }
-    result.push(obj)
-}
-//console.log(result)
-let json = JSON.stringify(result);
-
-//fs.writeFileSync('output.json', json);**/
-
+// import csv-parser library and file system modules
 const csv = require('csv-parser')
 const fs = require('fs')
 const results = [];
-let lat_values = [];
-let long_values = [];
 
+// create a readable stream from the csv file
 fs.createReadStream('ZebraMigrationData.csv')
   .pipe(csv())
   .on('data', (row) => {
-       // lat_values.push(latitude)
-        //longitude = row.longitude;
-       // long_values.push(longitude)
-        //console.log(lat_values)
+    // for each row extract the 'latitude' and 'longitude' values and create a new object, then push that into the 'results' array
         results.push({
             'latitude' : row.latitude,
             'longitude' : row.longitude
         })
   })
+  // listen until the stream has finished, and then run this
   .on('end', () => {
     console.log(results);
+    // convert the 'results' array into a json string
     let json = JSON.stringify(results);
+    // write the generated json string in a new file named 'output.json'
     fs.writeFileSync('output.json', json);
 });
