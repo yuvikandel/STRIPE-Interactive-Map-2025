@@ -67,7 +67,6 @@ function markerZebra() {
 const dolphins = L.layerGroup()
 function markerDolphin() {
     for (i = 0; i < dolphin_coordinates.length; i++) {
-        console.log('Hello World')
         var dolphin_marker = L.marker([dolphin_coordinates[i]['latitude'], dolphin_coordinates[i]['longitude']], { icon: dolphin_img }) // create dolphin marker with coordinates
         dolphin_marker.on('click', toggleDolphin)
         dolphins.addLayer(dolphin_marker) // add dolphin marker to layer group
