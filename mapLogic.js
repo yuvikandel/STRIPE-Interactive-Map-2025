@@ -146,6 +146,12 @@ function hideElement(idName) {
 infoCards = ['zebraCard', 'birdCard', 'dolphinCard', 'zcCard', 'bcCard', 'dcCard', 'zaidCard', 'baidCard', 'daidCard']
 
 // show info card functions
+function toggleCard(elementId) {
+    element = document.getElementById(elementId);
+    element.style.display = 'block';
+    hideOtherCards(elementId)
+}
+
 function toggleZebra() {
     element = document.getElementById('zebraCard');
     element.style.display = 'block';
