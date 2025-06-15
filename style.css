@@ -41,8 +41,17 @@ body {
     font-size: 13px;
 
 }
+
 .blue_font {
     color: #1c246e;
+    text-align: center;
+    font-family: merriwheather;
+    font-size: 13px;
+
+}
+
+.green_font {
+    color: #234d22;
     text-align: center;
     font-family: merriwheather;
     font-size: 13px;
@@ -194,6 +203,24 @@ h1 {
     overflow: hidden;
     border-radius: 25px;
     background-color: #aaccf1;
+    position: absolute;
+    text-align: center;
+    margin: 10px;
+    padding: 7px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: -525px;
+    display: none;
+    z-index: 1000;
+    margin-left: 67.5%;
+}
+
+.infoCard3 {
+    height: 600x;
+    width: 330px;
+    overflow: hidden;
+    border-radius: 25px;
+    background-color: #b5e6bd;
     position: absolute;
     text-align: center;
     margin: 10px;

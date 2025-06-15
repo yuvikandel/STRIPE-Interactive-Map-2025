@@ -32,6 +32,11 @@ var zebraChallenge_img = L.icon({
     iconUrl: 'lionicon.png',
     iconSize: [50, 50], // size of the icon
 });
+var zebraAid_img = L.icon({
+    iconUrl: 'zebraaid.png',
+    iconSize: [50, 50], // size of the icon
+})
+
 
 var bird_img = L.icon({
     iconUrl: 'pinkbird_image.png',
@@ -41,6 +46,10 @@ var birdChallenge_img = L.icon({
     iconUrl: 'invasivefish.png',
     iconSize: [50, 50], // size of the icon
 });
+var birdAid_img = L.icon({
+    iconUrl: 'birdaid.png',
+    iconSize: [50, 50], // size of the icon
+})
 
 var dolphin_img = L.icon({
     iconUrl: 'pinkdolphin_image.png',
@@ -50,6 +59,10 @@ var dolphinChallenge_img = L.icon({
     iconUrl: 'pollutionicon.png',
     iconSize: [50, 50], // size of the icon
 });
+var dolphinAid_img = L.icon({
+    iconUrl: 'dolphinaid.png',
+    iconSize: [50, 50], // size of the icon
+})
 
 // creating the layer groups
 const zebras = L.layerGroup()
@@ -62,6 +75,9 @@ function markerZebra() {
     var zebraChallenge_marker = L.marker([-21.7914, 26.4734], {icon: zebraChallenge_img})
     zebraChallenge_marker.on('click', toggleZChallenge) // challenge marker
     zebras.addLayer(zebraChallenge_marker)
+    var zebraAid_marker = L.marker([-21, 24], {icon: zebraAid_img})
+    zebraAid_marker.on('click', toggleZAid) // resource marker
+    zebras.addLayer(zebraAid_marker)
 }
 
 const dolphins = L.layerGroup()
@@ -74,6 +90,9 @@ function markerDolphin() {
     var dolphinChallenge_marker = L.marker([-2.163106, -55.126648], {icon: dolphinChallenge_img})
     dolphinChallenge_marker.on('click', toggleDChallenge) // challenge marker
     dolphins.addLayer(dolphinChallenge_marker)
+    var dolphinAid_marker = L.marker([-3.693, -61.4699], {icon: dolphinAid_img})
+    dolphinAid_marker.on('click', toggleDAid) // resource marker
+    dolphins.addLayer(dolphinAid_marker)
 }
 const birds = L.layerGroup()
 function markerBird() {
@@ -85,6 +104,9 @@ function markerBird() {
     var birdChallenge_marker = L.marker([13, -79], {icon: birdChallenge_img})
     birdChallenge_marker.on('click', toggleBChallenge) // challenge marker
     birds.addLayer(birdChallenge_marker)
+    var birdAid_marker = L.marker([16.5, -88], {icon: birdAid_img})
+    birdAid_marker.on('click', toggleBAid) // resource marker
+    birds.addLayer(birdAid_marker)
 }
 
 // base map layers
@@ -115,37 +137,72 @@ var overlayMaps = {
 // populate layers on map
 var layerControl = L.control.layers(baseMaps, overlayMaps).addTo(mymap);
 
-// show info card functions
-function toggleZebra() {
-    element = document.getElementById('zebraCard');
-    element.style.display = 'block';
-}
-function toggleBird() {
-    element = document.getElementById('birdCard');
-    element.style.display = 'block';
-}
-function toggleDolphin() {
-    element = document.getElementById('dolphinCard');
-    element.style.display = 'block';
-}
-function toggleZChallenge() {
-    element = document.getElementById('zcCard');
-    element.style.display = 'block';
-}
-function toggleBChallenge() {
-    element = document.getElementById('bcCard');
-    element.style.display = 'block';
-}
-function toggleDChallenge() {
-    element = document.getElementById('dcCard');
-    element.style.display = 'block';
-}
-
 // hide info cards
 function hideElement(idName) {
     element = document.getElementById(idName);
     element.style.display = 'none';
 }
+
+infoCards = ['zebraCard', 'birdCard', 'dolphinCard', 'zcCard', 'bcCard', 'dcCard', 'zaidCard', 'baidCard', 'daidCard']
+
+// show info card functions
+function toggleZebra() {
+    element = document.getElementById('zebraCard');
+    element.style.display = 'block';
+    hideOtherCards('zebraCard')
+}
+function toggleBird() {
+    element = document.getElementById('birdCard');
+    element.style.display = 'block';
+    hideOtherCards('birdCard')
+}
+function toggleDolphin() {
+    element = document.getElementById('dolphinCard');
+    element.style.display = 'block';
+    hideOtherCards('dolphinCard')
+}
+function toggleZChallenge() {
+    element = document.getElementById('zcCard');
+    element.style.display = 'block';
+    hideOtherCards('zcCard')
+}
+function toggleBChallenge() {
+    element = document.getElementById('bcCard');
+    element.style.display = 'block';
+    hideOtherCards('bcCard')
+}
+function toggleDChallenge() {
+    element = document.getElementById('dcCard');
+    element.style.display = 'block';
+    hideOtherCards('dcCard')
+}
+function toggleZAid() {
+    element = document.getElementById('zaidCard');
+    element.style.display = 'block';
+    hideOtherCards('zaidCard')
+}
+function toggleBAid() {
+    element = document.getElementById('baidCard');
+    element.style.display = 'block';
+    hideOtherCards('baidCard')
+}
+function toggleDAid() {
+    element = document.getElementById('daidCard');
+    element.style.display = 'block';
+    hideOtherCards('daidCard')
+}
+
+// hides the other info cards being displayed
+function hideOtherCards(toShow) {
+    const filtered = infoCards.filter(id => id !== toShow) // filters through the list, removes the card to be shown
+    for (let i = 0; i < filtered.length; i++) {
+        let currentCard = filtered[i];
+        hideElement(currentCard)
+        console.log('filtered')
+    }
+}
+
+
 const attribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
 const tileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const tiles = L.tileLayer(tileUrl, { maxZoom: 20, minZoom: 2, attribution });
